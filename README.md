@@ -1,6 +1,6 @@
 # Full Stack App
 
-## Second project in FSND in udacity it's called Trivia app, this app built with React as a frontend and flask in backend
+## A Second project in FSND in udacity it's called Trivia app, this app built with React as a frontend and flask in backend
 
 # Getting start
 
