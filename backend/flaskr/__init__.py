@@ -67,11 +67,7 @@ def create_app(test_config=None):
             "current_category": None
         })
 
-    # @TODO:
-    # Create an endpoint to DELETE question using a question ID.
-
-    # TEST: When you click the trash icon next to a question, the question will be removed.
-    # This removal will persist in the database and when you refresh the page.
+    # DELETE Question endpoint, to delete question by ID.
 
     @app.route('/questions/<int:question_id>', methods=['DELETE'])
     def delete_questions(question_id):
@@ -108,7 +104,9 @@ def create_app(test_config=None):
             category = int(category_request)
             difficulty = int(difficulty_request)
             question = Question(
-                question=question_request, category=category, difficulty=difficulty, answer=answer_request)
+                question=question_request, category=category,
+                difficulty=difficulty,
+                answer=answer_request)
             question.insert()
             return jsonify({
                 "Success": True,
